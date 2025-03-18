@@ -8,3 +8,5 @@ Ao contrario de um array, as linguagens de programação normalmente não tem me
 
 - O caso de uso mais famoso da pilha é a call stack ou pilha de chamadas de um programa que está sendo executado: a ordem de execução dos processos “chamados” por um programa via funções ou métodos obedece o princípio de pilha.<br>
 Outro recurso que utilizamos todos os dias e que utiliza pilhas para funcionar é o mecanismo de “voltar” e “avançar” páginas dos navegadores (representado normalmente por setas para a esquerda e direita). Os endereços visitados vão se empilhando; ao chamarmos a função de “voltar”, o último endereço visitado - ou seja, o que está no topo da pilha - é o primeiro a ser visualizado.
+
+[Referencia](https://www.alura.com.br/artigos/estruturas-de-dados-introducao?srsltid=AfmBOorF1JuhgjpDMFLHCm7KT3aWVsh0mAh4cd-i5wpxwMsolA_nM6GT#fila)
