@@ -18,5 +18,10 @@ Em algoritmos, os tipos de dados são definidos durante a declaração de variá
 O uso correto dos tipos de dados é fundamental para a correta execução do algoritmo, pois cada tipo de dado tem suas próprias características e limitações. Por exemplo, uma variável declarada como inteiro não pode armazenar valores com casas decimais, e uma variável declarada como string não pode ser utilizada em operações matemáticas. Por isso, é importante escolher o tipo de dado correto para cada variável, de acordo com as necessidades do algoritmo.
 [Referencia](https://www.dio.me/articles/conceitos-basicos-tipos-de-dados)
 ## Diferenças de Alocações
+Alocação de memória, em ciência da computação, consiste no processo de solicitar/utilizar memória durante o processo de execução de um programa de computador.
+
+ A alocação de memória no computador pode ser dividida em dois grupos principais:
+1. [Alocação Dinamica](https://github.com/Nicolas-Macedo/EstruturaDeDados/tree/main/Conceitos_Fundamentais/Aloca%C3%A7%C3%A3o_Dinamica).
+2. [Alocação Estatica](https://github.com/Nicolas-Macedo/EstruturaDeDados/tree/main/Conceitos_Fundamentais/Aloca%C3%A7%C3%A3o_Est%C3%A1tica).
 
 
