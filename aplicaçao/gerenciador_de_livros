@@ -1,0 +1,112 @@
+# Definindo a classe Livro para representar um livro
+class Livro:
+    def __init__(self, titulo, autor, ano):
+        # Atributos do livro: título, autor e ano de publicação
+        self.titulo = titulo
+        self.autor = autor
+        self.ano = ano
+
+    def __str__(self):
+        # Método para retornar uma representação legível do livro
+        return f"'{self.titulo}' por {self.autor} ({self.ano})"
+
+
+# Definindo a classe Pilha para implementar a estrutura de dados pilha
+class Pilha:
+    def __init__(self):
+        # Inicializa a pilha como uma lista vazia
+        self.items = []
+
+    def esta_vazia(self):
+        # Verifica se a pilha está vazia
+        return len(self.items) == 0
+
+    def push(self, item):
+        # Adiciona um item ao topo da pilha
+        self.items.append(item)
+
+    def pop(self):
+        # Remove e retorna o item do topo da pilha
+        if not self.esta_vazia():
+            return self.items.pop()
+        else:
+            # Lança uma exceção se a pilha estiver vazia
+            raise IndexError("A pilha está vazia")
+
+    def top(self):
+        # Retorna o item do topo da pilha sem removê-lo
+        if not self.esta_vazia():
+            return self.items[-1]
+        else:
+            # Lança uma exceção se a pilha estiver vazia
+            raise IndexError("A pilha está vazia")
+
+    def tamanho(self):
+        # Retorna o número de itens na pilha
+        return len(self.items)
+
+    def __str__(self):
+        # Retorna uma representação legível da pilha, com os itens em ordem inversa
+        return "\n".join(str(livro) for livro in reversed(self.items))
+
+
+# Definindo a classe GerenciadorLivros para gerenciar os livros na biblioteca
+class GerenciadorLivros:
+    def __init__(self):
+        # Inicializa a pilha de livros
+        self.pilha_livros = Pilha()
+
+    def adicionar_livro(self, titulo, autor, ano):
+        # Cria um objeto Livro e o adiciona à pilha
+        livro = Livro(titulo, autor, ano)
+        self.pilha_livros.push(livro)
+        print(f"Livro adicionado: {livro}")
+
+    def remover_ultimo_livro(self):
+        # Remove o último livro adicionado à pilha
+        try:
+            livro_removido = self.pilha_livros.pop()
+            print(f"Livro removido: {livro_removido}")
+        except IndexError as e:
+            # Captura a exceção se a pilha estiver vazia
+            print(e)
+
+    def ver_ultimo_livro(self):
+        # Exibe o último livro adicionado à pilha
+        try:
+            livro = self.pilha_livros.top()
+            print(f"Último livro adicionado: {livro}")
+        except IndexError as e:
+            # Captura a exceção se a pilha estiver vazia
+            print(e)
+
+    def listar_livros(self):
+        # Lista todos os livros na pilha
+        if self.pilha_livros.esta_vazia():
+            print("A biblioteca está vazia.")
+        else:
+            print("Livros na biblioteca:")
+            print(self.pilha_livros)
+
+
+# Exemplo de uso do gerenciador de livros
+if __name__ == "__main__":
+    # Cria uma instância do gerenciador de livros
+    gerenciador = GerenciadorLivros()
+
+    # Adiciona alguns livros à biblioteca
+    gerenciador.adicionar_livro("1984", "George Orwell", 1949)
+    gerenciador.adicionar_livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954)
+    gerenciador.adicionar_livro("Dom Quixote", "Miguel de Cervantes", 1605)
+
+    # Lista todos os livros na biblioteca
+    gerenciador.listar_livros()
+
+    # Exibe o último livro adicionado
+    gerenciador.ver_ultimo_livro()
+
+    # Remove o último livro adicionado
+    gerenciador.remover_ultimo_livro()
+
+    # Lista todos os livros novamente após a remoção
+    gerenciador.listar_livros()

@@ -22,3 +22,21 @@ Cada tipo de dado é armazenado e manipulado de maneira especifica.
 Elas são formas específicas de organizar e armazenar dados em um computador, para que possamos acessá-los, modificá-los ou gerenciá-los de maneira eficiente. Assim como na sua coleção de livros, a escolha da estrutura de dados certa depende do que você quer fazer com os dados.
 
 ` Um conjunto de teorias e praticas responsáveis po definir a forma como os dados podem ser armazenados, representados e consequetemente manipulados.`
+## exemplos do mundo real
+### - Fila de Banco
+Imagine que você chega em um banco e pega uma senha para ser atendido. O sistema do banco usa uma fila para organizar a ordem de atendimento:
+
+1. Quem chega primeiro, é atendido primeiro:
+- A fila segue o princípio FIFO (First In, First Out), ou seja, o primeiro cliente a chegar é o primeiro a ser atendido.
+
+2. Funcionamento:
+- Quando um cliente pega uma senha, ele é adicionado ao final da fila.
+- O atendente chama o próximo cliente sempre do início da fila.
+- Se alguém desiste de esperar, ele é removido da fila.
+
+3. Exemplo prático:
+- Cliente 1 chega e pega a senha 001 → entra na fila.
+- Cliente 2 chega e pega a senha 002 → entra na fila.
+- O atendente chama o Cliente 1 (senha 001) → ele é atendido e sai da fila.
+-Em seguida, o Cliente 2 (senha 002) é chamado.
+
